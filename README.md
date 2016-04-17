@@ -4,9 +4,11 @@ Lodash and Underscore are great modern JavaScript utility libraries, and they ar
 
 You are welcome to contribute with more items provided below.
 
-**If you are targeting legacy JavaScript engine with those ES5 methods, you can use [es5-shim](https://github.com/es-shims/es5-shim)
+** If you are targeting legacy JavaScript engine with those ES5 methods, you can use [es5-shim](https://github.com/es-shims/es5-shim)
 
-**Please note that, the examples used below are just showing you the native alternative of performing certain tasks. For some of the functions, Lodash provides you more options than native built-ins. This list is not a 1:1 comparison.
+** Please note that, the examples used below are just showing you the native alternative of performing certain tasks. For some of the functions, Lodash provides you more options than native built-ins. This list is not a 1:1 comparison.
+
+** Also please note that when chaining multiple operations, Lodash can sometimes drastically improve performance and memory usage by using lazy evaluation.  For example, using a `map` operation followed by a`filter` operation that matches only 10 elements out of an array of 10000 elements, followed by a `take` operation to get only the first 3 elements, means that the `map` operation only has to be executed 3 times instead of 10000 times.  Also when applying multiple `map` operations in a pipeline, lazy evaluation avoids creating intermediary arrays.
 
 ## Voice of developers
 
